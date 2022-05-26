@@ -1,22 +1,54 @@
 import React from "react";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSignInWithGoogle,
+  useUpdateProfile,
+} from "react-firebase-hooks/auth";
+import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Loading from "../Shared/Loading";
 
 const Register = () => {
+  //hooks
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+
+  const navigate = useNavigate();
+
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
 
-  const onSubmit = () => {
-    console.log(555);
+  let signInError;
+
+  // loding
+  if (loading || gLoading || updating) {
+    return <Loading></Loading>;
+  }
+  //error
+  if (error || gError || updateError) {
+    signInError = (
+      <p>{error?.message || gError.message || updateError.message}</p>
+    );
+  }
+  // validation
+  if (user || gUser) {
+    navigate("/");
+  }
+
+  const onSubmit = async (data) => {
+    await createUserWithEmailAndPassword(data.email, data.password);
   };
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
-          <h2 className="text-center text-2xl font-bold">Sign Up</h2>
+          <h2 className="text-center text-2xl font-bold">Registration</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-control w-full max-w-xs">
               <label className="label">
@@ -106,12 +138,12 @@ const Register = () => {
               </label>
             </div>
 
-            {/* {signInError} */}
+            {signInError}
 
             <input
               type="submit"
               className="btn w-full max-w-xs"
-              value="Sign Up"
+              value="Register"
             />
           </form>
           <p>

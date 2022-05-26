@@ -5,106 +5,95 @@
         "price": "780",
         "description": "RAM: 8GB, SSD: 512GB, Processor: core-i9th 9th generation",
         "img": "https://i.ibb.co/7yK8wZq/hp-business.jpg",
-        "quantity": "5",
-        "supplier": "HP Ltd.",
-        "email": "jobayer.ak@gmail.com"
+        "min_quantity": "1",
+        "available_quantity": "5"
     },
     {
         "name": "Hp Pavilion",
         "price": "850",
         "description": "RAM: 8GB, SSD: 1TB, Processor: core-i7th 9th generation",
         "img": "https://i.ibb.co/BPZV2f8/hp2.jpg",
-        "quantity": "5",
-        "supplier": "HP Ltd.",
-        "email": "jobayer.ak@gmail.com"
+        "min_quantity": "1",
+        "available_quantity": "5"
     },
     {
         "name": "Hp Elite Book",
         "price": "850",
         "description": "RAM: 8GB, SSD: 512GB, Processor: core-i7th 7th generation",
         "img": "https://i.ibb.co/MRBgNDS/hp3.jpg",
-        "quantity": "5",
-        "supplier": "HP Ltd.",
-        "email": "jobayer.ak@gmail.com"
+        "min_quantity": "1",
+        "available_quantity": "5"
     },
     {
         "name": "Dell Latitude",
         "price": "630",
         "description":"RAM: 4GB, SSD: 512GB, Processor: core-i7th 8th generation",
         "img": "https://i.ibb.co/FBhFHPK/dell1.jpg",
-        "quantity": "5",
-        "supplier": "Dell Ltd.",
-        "email": "jobayer96153474@yahoo.com"
+        "min_quantity": "1",
+        "available_quantity": "5"
     },
     {
         "name": "Dell Inspiroin",
         "price": "630",
         "description": "RAM: 8GB, HDD: 512GB, Processor: core-i9th 8th generation",
         "img": "https://i.ibb.co/hfT94Sr/Dell2.jpg",
-        "quantity": "5",
-        "supplier": "Dell Ltd.",
-        "email": "jobayer96153474@yahoo.com"
+        "min_quantity": "1",
+        "available_quantity": "5"
     },
     {
         "name": "Dell Newest Inspiroin",
         "price": "860",
         "description": "RAM: 8GB, SSD: 512GB, HDD: 1TB, Processor: core-i9th 11th generation",
         "img": "https://i.ibb.co/ys1VMhv/dell3.jpg",
-        "quantity": "5",
-        "supplier":"Dell Ltd.",
-        "email":"jobayer96153474@yahoo.com"
+        "min_quantity": "1",
+        "available_quantity": "5"
     },
     {
         "name": "Microsoft Surface",
         "price": "950",
         "description": "RAM: 8GB, SSD: 1TB, Processor: core-i7th 9th generation",
         "img": "https://i.ibb.co/qBJ998K/Microsoft1.jpg",
-        "quantity": "5",
-        "supplier": "Microsoft Corporation",
-        "email": "json.bourn.ak@gmail.com"
+        "min_quantity": "1",
+        "available_quantity": "5"
     },
     {
         "name": "Microsoft Surface Go",
         "price": "1050",
         "description": "RAM: 8GB, SSD: 512GB, Processor: core-i9th 9th generation",
         "img": "https://i.ibb.co/c1Srt2Y/Surface-Go.jpg",
-        "quantity": "5",
-        "supplier":"Microsoft Corporation",
-        "email": "json.bourn.ak@gmail.com"
+        "min_quantity": "1",
+        "available_quantity": "5"
     },
     {
         "name": "Microsoft Surface Studio",
         "price": "800",
         "description": "RAM: 8GB, SSD: 512GB, Processor: core-i9th 9th generation",
         "img": "https://i.ibb.co/bNMKnHK/Surface-studio.jpg",
-        "quantity": "5",
-        "supplier": "Microsoft Corporation",
-        "email": "json.bourn.ak@gmail.com"
+        "min_quantity": "1",
+        "available_quantity": "5"
     },
     {
         "name": "Lenevo Flex",
         "price": "960",
         "description": "RAM: 12GB, SSD: 512GB, Processor: core-i9th 11th generation",
         "img": "https://i.ibb.co/4RmSJfB/lenevo1.jpg",
-        "quantity": "5",
-        "supplier": "Lenovo Ltd.",
-        "email": "jobayer.ak@gmail.com"
+        "min_quantity": "1",
+        "available_quantity": "5"
     },
     {
         "name": "Lenevo IdeaPad",
         "price": "890",
         "description": "RAM: 8GB, SSD: 512GB, HDD: 512GB Processor: core-i7th 9th generation",
         "img": "https://i.ibb.co/F6VqDRX/Lenevo-Ideapad.jpg",
-        "quantity": "5",
-        "supplier": "Lenovo Ltd.",
-        "email":"jobayer96153474@yahoo.com"
+        "min_quantity": "1",
+        "available_quantity": "5"
     },
     {
         "name": "Lenevo IdeaPad 3",
         "price": "700",
         "description": "RAM: 8GB, SSD: 1TB, Processor: core-i9th 11th generation",
         "img": "https://i.ibb.co/M2mQfRY/Lenevo-Ideapad-3.jpg",
-        "quantity": "5",
-        "supplier": "Lenovo Ltd.",
-        "email": "json.bourn.ak@gmail.com"
+        "min_quantity": "1",
+        "available_quantity": "5"
     }
+]

@@ -1,17 +1,54 @@
-import React from "react";
+import React, { useEffect } from "react";
+import {
+  useAuthState,
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import auth from "../../firebase.init";
+import Loading from "../Shared/Loading";
 
 const Login = () => {
+  // hooks
+  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  // const [token] = useToken(user || gUser);
+  // const [user] = useAuthState(auth);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const onSubmit = () => {
-    console.log(555);
+  let signInError;
+  let from = location.state?.from?.pathname || "/";
+  console.log(from, ":first from");
+
+  useEffect(() => {
+    if (user || gUser) {
+      navigate(from, { replace: true });
+    }
+  }, [user, from, navigate]);
+
+  // loding
+  if (loading || gLoading) {
+    return <Loading></Loading>;
+  }
+  //error
+  if (error || gError) {
+    signInError = <p>{error?.message || gError.message}</p>;
+  }
+
+  // after login it will take to desire page
+  const onSubmit = (data) => {
+    console.log(data);
+    signInWithEmailAndPassword(data.email, data.password);
   };
+
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="card w-96 bg-base-100 shadow-xl">
@@ -83,7 +120,7 @@ const Login = () => {
               </label>
             </div>
 
-            {/* {signInError} */}
+            {signInError}
 
             <input
               type="submit"
