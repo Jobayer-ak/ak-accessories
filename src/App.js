@@ -12,6 +12,7 @@ import Parts from "./Pages/Home/Parts";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import RequireAuth from "./Pages/Login/RequireAuth";
 import NotFound from "./Pages/NotFound/NotFound";
+import Purchase from "./Pages/Purchase/Purchase";
 
 function App() {
   return (
@@ -19,12 +20,19 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/parts" element={<Parts></Parts>}></Route>
+        <Route path="/parts/" element={<Parts></Parts>}></Route>
         <Route
           path="/businessSummary"
           element={<BusinessSummary></BusinessSummary>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/reviews" element={<Reviews></Reviews>}></Route>
+        <Route
+          path="/parts/:ID"
+          element={
+            <RequireAuth>
+              <Purchase></Purchase>
+            </RequireAuth>
+          }></Route>
         <Route
           path="/dashboard"
           element={
