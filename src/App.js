@@ -1,9 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./Pages/Shared/Navbar";
-import Footer from "./Pages/Shared/Footer";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home/Home";
+import Login from "./Pages/Login/Login";
+import Register from "./Pages/Login/Register";
+import Parts from "./Pages/Shared/Parts";
+import BusinessSummary from "./Pages/Shared/BusinessSummary";
+import Blogs from "./Pages/Blogs/Blogs";
+import Reviews from "./Pages/Shared/Reviews";
 
 function App() {
   return (
@@ -11,8 +16,15 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/parts" element={<Parts></Parts>}></Route>
+        <Route
+          path="/businessSummary"
+          element={<BusinessSummary></BusinessSummary>}></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/reviews" element={<Reviews></Reviews>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
       </Routes>
-      <Footer></Footer>
     </div>
   );
 }

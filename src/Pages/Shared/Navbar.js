@@ -11,7 +11,7 @@ const Navbar = () => {
         <Link to="/parts">Parts</Link>
       </li>
       <li tabIndex="0">
-        <Link to="/businesssummary" className="justify-between">
+        <Link to="/businessSummary" className="justify-between">
           Business Summary
         </Link>
       </li>
@@ -20,6 +20,9 @@ const Navbar = () => {
       </li>
       <li>
         <Link to="/reviews">Reviews</Link>
+      </li>
+      <li>
+        <Link to="/login">Login</Link>
       </li>
     </>
   );
@@ -49,18 +52,18 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <Link to="" className="btn btn-ghost normal-case text-xl">
+        <Link to="/" className="normal-case text-2xl font-bold">
           Ak-Accessories
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
       </div>
-      <div className="navbar-end">
+      {/* <div className="navbar-end">
         <Link to="" className="btn">
           Get started
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
