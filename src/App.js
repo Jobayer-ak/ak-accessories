@@ -9,6 +9,9 @@ import BusinessSummary from "./Pages/Shared/BusinessSummary";
 import Blogs from "./Pages/Blogs/Blogs";
 import Reviews from "./Pages/Shared/Reviews";
 import Parts from "./Pages/Home/Parts";
+import Dashboard from "./Pages/Dashboard/Dashboard";
+import RequireAuth from "./Pages/Login/RequireAuth";
+import NotFound from "./Pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -22,8 +25,16 @@ function App() {
           element={<BusinessSummary></BusinessSummary>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/reviews" element={<Reviews></Reviews>}></Route>
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard></Dashboard>
+            </RequireAuth>
+          }></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );
