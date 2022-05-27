@@ -13,6 +13,8 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import RequireAuth from "./Pages/Login/RequireAuth";
 import NotFound from "./Pages/NotFound/NotFound";
 import Purchase from "./Pages/Purchase/Purchase";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -44,6 +46,7 @@ function App() {
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

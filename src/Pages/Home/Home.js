@@ -7,12 +7,14 @@ import Parts from "./Parts";
 
 const Home = () => {
   return (
-    <div>
-      <Banner></Banner>
-      <Parts></Parts>
-      <Reviews></Reviews>
-      <BusinessSummary></BusinessSummary>
-      <Footer></Footer>
+    <div className="">
+      <div className="container mx-auto p-5 md:p-2">
+        <Banner></Banner>
+        <Parts></Parts>
+        <Reviews></Reviews>
+        <BusinessSummary></BusinessSummary>
+        <Footer></Footer>
+      </div>
     </div>
   );
 };

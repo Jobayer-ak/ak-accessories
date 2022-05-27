@@ -34,7 +34,7 @@ const Part = ({ part }) => {
           <button
             onClick={() => navigateToPurchase(_id)}
             className="btn btn-primary">
-            Proceed Checkout
+            Buy Now
           </button>
         </div>
       </div>
