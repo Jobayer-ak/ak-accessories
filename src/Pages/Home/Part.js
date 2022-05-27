@@ -1,10 +1,10 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Part = ({ part }) => {
   // hooks
-  const { ID } = useParams();
-  console.log(ID);
+  const navigate = useNavigate();
+
   const {
     _id,
     name,
@@ -14,6 +14,10 @@ const Part = ({ part }) => {
     available_quantity,
     min_quantity,
   } = part;
+
+  const navigateToPurchase = (id) => {
+    navigate(`/purchase/${id}`);
+  };
 
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
@@ -26,11 +30,12 @@ const Part = ({ part }) => {
         <p>Available Quantity: {available_quantity}</p>
         <p>Minimum Order Quantity: {min_quantity}</p>
         <p>Price: ${price}</p>
-        <p>Parts ID: {ID}</p>
         <div className="card-actions">
-          <Link to={`/parts/${ID}`}>
-            <button className="btn btn-primary">Proceed Checkout</button>
-          </Link>
+          <button
+            onClick={() => navigateToPurchase(_id)}
+            className="btn btn-primary">
+            Proceed Checkout
+          </button>
         </div>
       </div>
     </div>

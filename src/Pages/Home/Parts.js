@@ -1,12 +1,10 @@
 import userEvent from "@testing-library/user-event";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import useParts from "../../hooks/useParts";
 import Part from "./Part";
 
 const Parts = () => {
   // hooks
-  const { ID } = useParams();
   const [parts] = useParts();
 
   return (

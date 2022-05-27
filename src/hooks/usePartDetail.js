@@ -1,17 +1,16 @@
 import { useEffect, useState } from "react";
 
-const usePartDetail = (ID) => {
+const usePartDetail = (partsId) => {
   // hook
   const [part, setPart] = useState({});
-  console.log(ID);
 
   useEffect(() => {
-    const url = `http://localhost:5000/parts/${ID}`;
+    const url = `http://localhost:5000/parts/${partsId}`;
     console.log(url);
     fetch(url)
       .then((res) => res.json())
       .then((data) => setPart(data));
-  }, [ID]);
+  }, [partsId]);
 
   return [part, setPart];
 };

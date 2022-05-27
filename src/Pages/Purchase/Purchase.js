@@ -5,10 +5,10 @@ import auth from "../../firebase.init";
 import usePartDetail from "../../hooks/usePartDetail";
 
 const Purchase = () => {
-  const [user] = useAuthState(auth);
   // hooks
-  const { ID } = useParams();
-  const [part] = usePartDetail(ID);
+  const [user] = useAuthState(auth);
+  const { partsId } = useParams();
+  const [part] = usePartDetail(partsId);
 
   return (
     <div>
