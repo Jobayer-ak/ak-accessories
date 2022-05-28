@@ -1,9 +1,12 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import auth from "../../firebase.init";
 
 const AddReview = () => {
   const { register, handleSubmit, reset } = useForm();
+  const [user] = useAuthState(auth);
 
   const onSubmit = (data) => {
     console.log(data.rating);
@@ -13,6 +16,8 @@ const AddReview = () => {
     }
 
     const review = {
+      image: user?.photoURL,
+      name: user?.displayName,
       feedback: data.review,
       ratings: data.rating,
     };
