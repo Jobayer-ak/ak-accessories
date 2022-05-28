@@ -60,6 +60,8 @@ const Purchase = () => {
           console.log(data);
           if (data.success) {
             toast.success("Your Parts is ordered!");
+            // window.location.reload(true);
+            // refetch();
           } else {
             toast.error("You already ordered this parts!");
           }
