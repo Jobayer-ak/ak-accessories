@@ -13,7 +13,7 @@ const MyOrders = () => {
     })
       .then((res) => res.json())
       .then((data) => setOrderedParts(data));
-  }, [user]);
+  }, [user, isReload]);
   return (
     <div className="bg-gray-200 p-5">
       <h2 className="text-3xl font-bold text-center">

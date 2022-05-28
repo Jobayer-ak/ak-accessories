@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { set } from "react-hook-form";
 import { toast } from "react-toastify";
 
 const OrderedPartsDetail = ({ ordered }) => {
-  const [deleteStatus, setDeleteStatus] = useState(false);
   const {
     _id,
     customerName,
@@ -14,21 +14,24 @@ const OrderedPartsDetail = ({ ordered }) => {
     partDesc,
   } = ordered;
 
-  //   useEffect(() => {}, [deleteStatus]);
+  //   useEffect(() => {
+  //     setIsReload(false);
+  //   }, [isReload]);
+
   // handle delete order
   const handleDeleteOrder = () => {
-    console.log(33);
     const url = `http://localhost:5000/orders/${_id}`;
     fetch(url, {
       method: "DELETE",
     })
       .then((res) => res.json())
       .then((data) => {
-        setDeleteStatus(true);
+        setIsReload(true);
         toast.success("Deleted Item!");
         // window.location.reload(true);
       });
   };
+
   return (
     <div className="card lg:card-side bg-base-100 shadow-2xl p-4 my-3">
       <img className="w-2/6" src={partImg} alt="Album" />
@@ -51,7 +54,7 @@ const OrderedPartsDetail = ({ ordered }) => {
             </h3>
 
             <div className="modal-action">
-              <label for="my-modal-6" class="btn">
+              <label htmlFor="my-modal-6" className="btn">
                 Cancel
               </label>
               <label

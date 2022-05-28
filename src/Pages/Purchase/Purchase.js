@@ -44,7 +44,8 @@ const Purchase = () => {
   }, [partQuantity]);
 
   // handle order button
-  const handleOrder = () => {
+  const handleOrder = (e) => {
+    e.preventDefault();
     if (address === "" || phone === "" || partQuantity === "") {
       setFieldError("You must fill up all the input field!");
     } else {
@@ -61,7 +62,6 @@ const Purchase = () => {
           if (data.success) {
             toast.success("Your Parts is ordered!");
             // window.location.reload(true);
-            // refetch();
           } else {
             toast.error("You already ordered this parts!");
           }
@@ -74,7 +74,7 @@ const Purchase = () => {
       <div className="text-center mt-4">
         <h2 className="text-3xl font-bold">Purchase</h2>
       </div>
-      <div className="flex md:flex-row flex-col justify-around items-center mt-20">
+      <form className="flex md:flex-row flex-col justify-evenly items-center mt-20 gap-7">
         <div className="text-center bg-slate-200 rounded-md shadow-2xl p-4">
           <div>
             <img className="w-72 mx-auto bg-slate-200" src={part.img} alt="" />
@@ -89,53 +89,87 @@ const Purchase = () => {
             <p className="font-bold">Minimum Order: {part.min_quantity}</p>
           </div>
         </div>
-        <div className="text-center">
+        <div className="text-center w-2/4">
           <h3 className="text-2xl font-bold mb-4">Order Information</h3>
-          <input
-            type="text"
-            name="name"
-            value={user?.displayName}
-            readOnly
-            className="input input-bordered input-primary w-full max-w-sm mb-4"
-          />
-          <input
-            type="email"
-            name="email"
-            value={user?.email}
-            readOnly
-            className="input input-bordered input-primary w-full max-w-sm mb-4"
-          />
-          <input
-            onBlur={(e) => setAddress(e.target.value)}
-            type="text"
-            placeholder="Your Address"
-            name="address"
-            className="input input-bordered input-primary w-full max-w-sm mb-4"
-            required
-          />
-          <br />
-          <input
-            onBlur={(e) => setPhone(e.target.value)}
-            type="text"
-            placeholder="Phone Number"
-            name="phone"
-            className="input input-bordered input-primary w-full max-w-sm mb-4"
-            required
-          />
-          <input
-            onChange={(e) => setPartQuantity(e.target.value)}
-            type="number"
-            placeholder="Parts Quantity"
-            name="quantity"
-            className="input input-bordered input-primary w-full max-w-sm mb-4"
-            required
-          />
-          <p className="text-danger mb-2">{fieldError}</p>
-          <button onClick={handleOrder} className="btn mb-4" disabled={status}>
-            Place Order
-          </button>
+
+          <div className="flex flex-row justify-around items-center mb-3">
+            <div className="w-1/5">
+              <label class="label text-xl">Your Name :</label>
+            </div>
+            <input
+              type="text"
+              name="name"
+              value={user?.displayName}
+              readOnly
+              className="input input-bordered input-primary w-full max-w-sm "
+            />
+          </div>
+
+          <div className="flex flex-row justify-around items-center mb-3">
+            <div className="w-1/5">
+              <label class="label text-xl">Email :</label>
+            </div>
+            <input
+              type="email"
+              name="email"
+              value={user?.email}
+              readOnly
+              className="input input-bordered input-primary w-full max-w-sm"
+            />
+          </div>
+          <div className="flex flex-row gap-5 justify-around items-center mb-3">
+            <div className="w-1/6">
+              <label class="label text-xl">Address :</label>
+            </div>
+            <input
+              onBlur={(e) => setAddress(e.target.value)}
+              type="text"
+              placeholder="Your Address"
+              name="address"
+              className="input input-bordered input-primary w-full max-w-sm 2"
+              required
+            />
+          </div>
+          <div className="flex flex-row gap-5 justify-around items-center mb-3">
+            <div className="w-1/6">
+              <label class="label text-xl">Phone :</label>
+            </div>
+            <input
+              onBlur={(e) => setPhone(e.target.value)}
+              type="text"
+              placeholder="Phone Number"
+              name="phone"
+              className="input input-bordered input-primary w-full max-w-sm 2"
+              required
+            />
+          </div>
+          <div className="flex flex-row gap-5 justify-around items-center">
+            <div className="w-1/6">
+              <label class="label text-xl">Quantity :</label>
+            </div>
+            <input
+              onChange={(e) => setPartQuantity(e.target.value)}
+              type="number"
+              placeholder="Parts Quantity"
+              name="quantity"
+              className="input input-bordered input-primary w-full max-w-sm 2"
+              required
+            />
+          </div>
+          <div className="mt-3">
+            <p className="text-red-500 mb-2">{fieldError}</p>
+            <button
+              onClick={handleOrder}
+              className="btn mb-4"
+              disabled={status}>
+              Place Order
+            </button>
+            {/* <button onClick={handleReset} className="btn mb-4">
+              Reset
+            </button> */}
+          </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 };
