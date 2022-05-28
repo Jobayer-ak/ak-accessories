@@ -2,6 +2,7 @@ import React from "react";
 import BusinessSummary from "../Shared/BusinessSummary";
 import Footer from "../Shared/Footer";
 import Reviews from "../Shared/Reviews";
+import SlickReview from "../Shared/SlickReview";
 import Banner from "./Banner";
 import Parts from "./Parts";
 
@@ -12,6 +13,7 @@ const Home = () => {
         <Banner></Banner>
         <Parts></Parts>
         <Reviews></Reviews>
+        {/* <SlickReview></SlickReview> */}
         <BusinessSummary></BusinessSummary>
         <Footer></Footer>
       </div>
