@@ -6,6 +6,7 @@ import OrderedPartsDetail from "./OrderedPartsDetail";
 const MyOrders = () => {
   const [user] = useAuthState(auth);
   const [orderedParts, setOrderedParts] = useState([]);
+  const [isReload, setIsReload] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:5000/orders?email=${user.email}`, {
@@ -22,7 +23,9 @@ const MyOrders = () => {
       {orderedParts.map((ordered) => (
         <OrderedPartsDetail
           key={ordered._id}
-          ordered={ordered}></OrderedPartsDetail>
+          ordered={ordered}
+          isReload={isReload}
+          setIsReload={setIsReload}></OrderedPartsDetail>
       ))}
     </div>
   );

@@ -10,6 +10,7 @@ const Purchase = () => {
   const [user] = useAuthState(auth);
   const { partsId } = useParams();
   const [part] = usePartDetail(partsId);
+  const [isReload, setIsReload] = useState(false);
   const [partName, setPartName] = useState("");
   const [customerEmail, setCustomerEmail] = useState("");
   const [customerName, setCustomerName] = useState("");
@@ -41,7 +42,7 @@ const Purchase = () => {
     } else {
       setStatus(false);
     }
-  }, [partQuantity]);
+  }, [partQuantity, isReload]);
 
   // handle order button
   const handleOrder = (e) => {
@@ -61,6 +62,7 @@ const Purchase = () => {
           console.log(data);
           if (data.success) {
             toast.success("Your Parts is ordered!");
+            setIsReload(true);
             // window.location.reload(true);
           } else {
             toast.error("You already ordered this parts!");
@@ -74,7 +76,7 @@ const Purchase = () => {
       <div className="text-center mt-4">
         <h2 className="text-3xl font-bold">Purchase</h2>
       </div>
-      <form className="flex md:flex-row flex-col justify-evenly items-center mt-20 gap-7">
+      <div className="flex md:flex-row flex-col justify-evenly items-center mt-20 gap-7">
         <div className="text-center bg-slate-200 rounded-md shadow-2xl p-4">
           <div>
             <img className="w-72 mx-auto bg-slate-200" src={part.img} alt="" />
@@ -169,7 +171,7 @@ const Purchase = () => {
             </button> */}
           </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 };

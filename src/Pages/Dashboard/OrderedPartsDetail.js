@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { set } from "react-hook-form";
 import { toast } from "react-toastify";
 
-const OrderedPartsDetail = ({ ordered }) => {
+const OrderedPartsDetail = ({ ordered, isReload, setIsReload }) => {
   const {
     _id,
     customerName,
@@ -14,9 +14,9 @@ const OrderedPartsDetail = ({ ordered }) => {
     partDesc,
   } = ordered;
 
-  //   useEffect(() => {
-  //     setIsReload(false);
-  //   }, [isReload]);
+  useEffect(() => {
+    setIsReload(false);
+  }, [isReload]);
 
   // handle delete order
   const handleDeleteOrder = () => {
