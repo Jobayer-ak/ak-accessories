@@ -18,6 +18,14 @@ import { ToastContainer } from "react-toastify";
 import MyOrders from "./Pages/Dashboard/MyOrders";
 import AddReview from "./Pages/Dashboard/AddReview";
 import MyProfile from "./Pages/Dashboard/MyProfile";
+import RequireAdmin from "./Pages/Login/RequireAdmin";
+// import Users from "./Pages/Dashboard/Users";
+import AddParts from "./Pages/Dashboard/AddParts";
+import ManageParts from "./Pages/Dashboard/ManageParts";
+import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
+import AllUser from "./Pages/Dashboard/AllUser";
+import ManageAllOrders from "./Pages/Dashboard/ManageAllOrders";
+import Users from "./Pages/Dashboard/Users";
 
 function App() {
   return (
@@ -48,6 +56,35 @@ function App() {
           <Route path="myprofile" element={<MyProfile></MyProfile>}></Route>
           <Route path="orders" element={<MyOrders></MyOrders>}></Route>
           <Route path="addreview" element={<AddReview></AddReview>}></Route>
+          <Route
+            path="users"
+            element={
+              <RequireAdmin>
+                <Users></Users>
+              </RequireAdmin>
+            }></Route>
+          <Route
+            path="addParts"
+            element={
+              <RequireAdmin>
+                <AddParts></AddParts>
+              </RequireAdmin>
+            }></Route>
+          <Route
+            path="manageOrders"
+            element={
+              <RequireAdmin>
+                <ManageAllOrders></ManageAllOrders>
+              </RequireAdmin>
+            }></Route>
+
+          <Route
+            path="manageParts"
+            element={
+              <RequireAdmin>
+                <ManageParts></ManageParts>
+              </RequireAdmin>
+            }></Route>
         </Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
