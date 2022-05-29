@@ -26,6 +26,7 @@ import MakeAdmin from "./Pages/Dashboard/MakeAdmin";
 import AllUser from "./Pages/Dashboard/AllUser";
 import ManageAllOrders from "./Pages/Dashboard/ManageAllOrders";
 import Users from "./Pages/Dashboard/Users";
+import MyPortfolio from "./Pages/MyPortfolio/MyPortfolio";
 
 function App() {
   return (
@@ -38,7 +39,9 @@ function App() {
           path="/businessSummary"
           element={<BusinessSummary></BusinessSummary>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
-        {/* <Route path="/reviews" element={<Reviews></Reviews>}></Route> */}
+        <Route
+          path="/myportfolio"
+          element={<MyPortfolio></MyPortfolio>}></Route>
         <Route
           path="/purchase/:partsId"
           element={

@@ -2,7 +2,7 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, Outlet } from "react-router-dom";
 import auth from "../../firebase.init";
-import useAdmin from "../../hooks/useAdmin";
+import useAdmin from "../../hooks/UseAdmin";
 
 const Dashboard = () => {
   //hooks
@@ -24,29 +24,34 @@ const Dashboard = () => {
         <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
         <ul className="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
           {/* <!-- Sidebar content here --> */}
-          {user && (
-            <>
-              <li>
-                <Link to="/dashboard/orders">My Orders</Link>
-              </li>
-              <li>
-                <Link to="/dashboard/addreview">Add A Review</Link>
-              </li>
-              <li>
+
+          {/*
+            <li>
+               <Link to="/dashboard/orders">My Orders</Link>
+            </li>
+            <li>
+              <Link to="/dashboard/addreview">Add A Review</Link>
+            </li>
+            <li>
+              <Link to="/dashboard/myprofile">My Profile</Link>
+            </li> */}
+          <li>
+            {admin ? (
+              <>
                 <Link to="/dashboard/myprofile">My Profile</Link>
-              </li>
-              <li>
-                {admin && (
-                  <>
-                    <Link to="/dashboard/users">Make Admin</Link>
-                    <Link to="/dashboard/manageOrders">Manage All Orders</Link>
-                    <Link to="/dashboard/addParts">Add A Product</Link>
-                    <Link to="/dashboard/manageParts">Manage Products</Link>
-                  </>
-                )}
-              </li>
-            </>
-          )}
+                <Link to="/dashboard/users">Make Admin</Link>
+                <Link to="/dashboard/manageOrders">Manage All Orders</Link>
+                <Link to="/dashboard/addParts">Add A Product</Link>
+                <Link to="/dashboard/manageParts">Manage Products</Link>
+              </>
+            ) : (
+              <>
+                <Link to="/dashboard/orders">My Orders</Link>
+                <Link to="/dashboard/addreview">Add A Review</Link>
+                <Link to="/dashboard/myprofile">My Profile</Link>
+              </>
+            )}
+          </li>
         </ul>
       </div>
     </div>

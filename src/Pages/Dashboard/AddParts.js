@@ -9,7 +9,7 @@ const AddParts = () => {
   const [user] = useAuthState(auth);
 
   // Add Item
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data, e) => {
     const url = `http://localhost:5000/parts`;
     fetch(url, {
@@ -22,7 +22,7 @@ const AddParts = () => {
       .then((res) => res.json())
       .then((result) => {
         toast.success("Successfully Your Item is Added!!!");
-        e.target.reset();
+        reset();
       });
   };
 
