@@ -13,7 +13,11 @@ const MyOrders = () => {
       method: "GET",
     })
       .then((res) => res.json())
-      .then((data) => setOrderedParts(data));
+      .then((data) => {
+        const myOrders = data.filter((d) => d.customerEmail === user.email);
+
+        setOrderedParts(myOrders);
+      });
   }, [user, isReload]);
   return (
     <div className="bg-gray-200 p-5">

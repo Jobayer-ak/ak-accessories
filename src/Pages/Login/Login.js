@@ -45,7 +45,6 @@ const Login = () => {
 
   // after login it will take to desire page
   const onSubmit = (data) => {
-    console.log(data);
     signInWithEmailAndPassword(data.email, data.password);
   };
 

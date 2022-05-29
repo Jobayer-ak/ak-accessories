@@ -67,14 +67,14 @@ const Reviews = () => {
       .then((data) => setReviews(data));
   }, [reviews]);
   return (
-    <div className="container mx-auto p-5">
-      <h2 className="text-center text-3xl">
-        What Our Customer Say: {reviews.length}
+    <div className="container mx-auto my-5 p-5">
+      <h2 className="text-center font-bold text-3xl my-8">
+        What Our Customers Say
       </h2>
 
       <Slider {...settings}>
         {reviews?.map((review) => (
-          <div key={review._id} className="card w-96 bg-base-100 shadow-xl m-1">
+          <div key={review._id} className="card w-96 bg-base-100 shadow-xl">
             <figure>
               <img className="rounded-full" src={review.image} alt="image" />
             </figure>
