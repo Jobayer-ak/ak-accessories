@@ -5,9 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Login/Register";
-import BusinessSummary from "./Pages/Shared/BusinessSummary";
 import Blogs from "./Pages/Blogs/Blogs";
-import Reviews from "./Pages/Shared/Reviews";
 import Parts from "./Pages/Home/Parts";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import RequireAuth from "./Pages/Login/RequireAuth";
@@ -35,9 +33,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/parts/" element={<Parts></Parts>}></Route>
-        <Route
-          path="/businessSummary"
-          element={<BusinessSummary></BusinessSummary>}></Route>
+
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route
           path="/myportfolio"

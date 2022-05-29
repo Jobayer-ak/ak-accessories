@@ -20,11 +20,6 @@ const Navbar = () => {
       <li>
         <Link to="/parts">Parts</Link>
       </li>
-      <li tabIndex="0">
-        <Link to="/businessSummary" className="justify-between">
-          Business Summary
-        </Link>
-      </li>
       <li>
         <Link to="/blogs">Blogs</Link>
       </li>
