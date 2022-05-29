@@ -8,6 +8,7 @@ import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import Loading from "../Shared/Loading";
+import useToken from "../../hooks/useToken";
 
 const Register = () => {
   //hooks
@@ -17,6 +18,7 @@ const Register = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
 
   const navigate = useNavigate();
+  const [token] = useToken(user || gUser);
 
   const {
     register,
@@ -37,7 +39,7 @@ const Register = () => {
     );
   }
   // validation
-  if (user || gUser) {
+  if (token) {
     navigate("/");
   }
 
