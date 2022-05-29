@@ -19,6 +19,7 @@ const Users = () => {
   if (isLoading) {
     return <Loading></Loading>;
   }
+
   return (
     <div className="text-center p-4">
       <h2 className="text-2xl my-5">All Users: {users.length}</h2>
@@ -27,7 +28,7 @@ const Users = () => {
           <thead>
             <tr>
               <th></th>
-              <th>Name</th>
+              <th>User Email</th>
               <th>Role</th>
               <th>Favorite Color</th>
             </tr>
