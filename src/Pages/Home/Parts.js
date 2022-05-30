@@ -13,7 +13,7 @@ const Parts = () => {
   const pathName = location.pathname;
 
   return (
-    <div>
+    <div className="mb-20">
       <h2 className="text-2xl">Parts: {parts.length}</h2>
       <div className="flex flex-row flex-wrap gap-14">
         {pathName == "/"

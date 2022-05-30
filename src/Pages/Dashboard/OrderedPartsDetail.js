@@ -42,7 +42,7 @@ const OrderedPartsDetail = ({ ordered, isReload, setIsReload }) => {
         <p className="font-bold text-xl">Ordered Quantity: {partQuantity}</p>
       </div>
       <div className="card-actions justify-center items-center">
-        <label htmlFor="my-modal-6" className="btn modal-button">
+        <label htmlFor="my-modal-6" className="btn btn-primary modal-button">
           Delete
         </label>
 
@@ -54,13 +54,13 @@ const OrderedPartsDetail = ({ ordered, isReload, setIsReload }) => {
             </h3>
 
             <div className="modal-action">
-              <label htmlFor="my-modal-6" className="btn">
+              <label htmlFor="my-modal-6" className="btn btn-primary">
                 Cancel
               </label>
               <label
                 onClick={handleDeleteOrder}
                 htmlFor="my-modal-6"
-                className="btn">
+                className="btn btn-primary">
                 Okay
               </label>
             </div>

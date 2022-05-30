@@ -116,11 +116,11 @@ const MyProfile = () => {
           {...register("phone")}
         />
 
-        <input type="submit" className="btn" />
+        <input type="submit" className="btn btn-primary" />
       </form>
 
       {/* <!-- The button to open modal --> */}
-      <label for="my-modal-6" class="btn modal-button">
+      <label for="my-modal-6" class="btn btn-primary modal-button">
         Update Your Profile
       </label>
 
@@ -158,12 +158,12 @@ const MyProfile = () => {
               required
               name="phone"
             />
-            <button className="btn">Save</button>
+            <button className="btn btn-primary">Save</button>
             <div class="modal-action">
-              {/* <label htmlFor="my-modal-6" className="btn">
+              {/* <label htmlFor="my-modal-6" className="btn btn-primary">
                 Cancel
               </label> */}
-              <label for="my-modal-6" class="btn">
+              <label for="my-modal-6" class="btn btn-primary">
                 Close
               </label>
             </div>

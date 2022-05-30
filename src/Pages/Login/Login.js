@@ -125,7 +125,7 @@ const Login = () => {
 
             <input
               type="submit"
-              className="btn w-full max-w-xs"
+              className="btn btn-primary w-full max-w-xs"
               value="Login"
             />
           </form>
@@ -141,7 +141,7 @@ const Login = () => {
           <div className="divider">OR</div>
           <button
             onClick={() => signInWithGoogle()}
-            className="btn btn-outline">
+            className="btn btn-primary btn-outline">
             Continue with Google
           </button>
           {/* <button onClick={() => signInWithGoogle()}>Sign In</button> */}

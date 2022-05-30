@@ -38,7 +38,7 @@ const Navbar = () => {
         {user ? (
           <button
             onClick={logout}
-            className="btn btn-link text-decoration-none">
+            className="btn btn-primary btn-link text-decoration-none">
             Log Out
           </button>
         ) : (
@@ -52,7 +52,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex="0" className="btn btn-ghost lg:hidden">
+          <label tabIndex="0" className="btn btn-primary btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"

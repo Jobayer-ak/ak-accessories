@@ -13,7 +13,7 @@ import "./BusinessSummary.css";
 
 const BusinessSummary = () => {
   return (
-    <div className="text-center bg_container">
+    <div className="text-center bg_container my-5">
       <div className="text-center mt-5 mb-20">
         <h2 className="text-4xl font-bold text-teal-700">
           Thousands Cusotmer Trust Us

@@ -162,11 +162,11 @@ const Purchase = () => {
             <p className="text-red-500 mb-2">{fieldError}</p>
             <button
               onClick={handleOrder}
-              className="btn mb-4"
+              className="btn btn-primary mb-4"
               disabled={status}>
               Place Order
             </button>
-            {/* <button onClick={handleReset} className="btn mb-4">
+            {/* <button onClick={handleReset} className="btn btn-primary mb-4">
               Reset
             </button> */}
           </div>

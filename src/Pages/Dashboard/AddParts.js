@@ -72,7 +72,7 @@ const AddParts = () => {
         />
 
         <input
-          className="btn btn-secondary mt-3 mb-5"
+          className="btn btn-primary mt-3 mb-5"
           type="submit"
           value="Add Item"
         />

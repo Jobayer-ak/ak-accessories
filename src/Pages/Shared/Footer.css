@@ -1,0 +1,9 @@
+.bg_footer{
+    background: linear-gradient(rgba(211, 235, 239, 0.1), rgba(232, 239, 242, 0.8)), url(../../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 25px;
+}
