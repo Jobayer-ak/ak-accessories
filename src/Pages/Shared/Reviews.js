@@ -66,23 +66,30 @@ const Reviews = () => {
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, [reviews]);
+
   return (
     <div className="container mx-auto my-5 p-5">
-      <h2 className="text-center font-bold text-3xl my-8">
+      <h2 className="text-center text-primary font-bold text-4xl mb-8">
         What Our Customers Say
       </h2>
 
       <Slider {...settings}>
         {reviews?.map((review) => (
-          <div key={review._id} className="card w-96 bg-base-100 shadow-xl">
-            <figure>
-              <img className="rounded-full" src={review.image} alt="image" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title italic">{review.name}</h2>
-              <p>"{review.feedback}"</p>
+          <div
+            key={review._id}
+            className="flex flex-col md:flex-row lg:flex-row rounded-md bg-base-100 shadow-xl p-3 w-full gap-4">
+            <img
+              className="rounded-full items-center"
+              src={review.image}
+              alt="image"
+            />
 
-              <DynamicStar width={15} rating={review.ratings} />
+            <div className="flex flex-col mt-4 p-0">
+              <p className="italic mb-2">"{review.feedback}"</p>
+
+              <DynamicStar height={20} width={15} rating={review.ratings} />
+
+              <h2 className="italic text-right">{review.name}</h2>
             </div>
           </div>
         ))}
