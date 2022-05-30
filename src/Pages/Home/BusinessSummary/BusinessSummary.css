@@ -1,5 +1,5 @@
 .bg_container{
-    background: linear-gradient(rgba(182, 237, 247, 0.9), rgba(193, 226, 240, 0.9)), url(../../images/bs-bg.png);
+    background: linear-gradient(rgba(182, 237, 247, 0.9), rgba(193, 226, 240, 0.9)), url(../../../images/bs-bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

@@ -1,9 +1,4 @@
 import React from "react";
-import people from "../../images/people.png";
-import feedback from "../../images/feedback.png";
-import event from "../../images/event.png";
-// import Summary from "./Summary";
-// import bs_bg from "../../images/bs-bg.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUsersLine } from "@fortawesome/free-solid-svg-icons";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
