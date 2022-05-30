@@ -96,7 +96,7 @@ const Purchase = () => {
 
           <div className="flex flex-row justify-around items-center mb-3">
             <div className="w-1/5">
-              <label class="label text-xl">Your Name :</label>
+              <label className="label text-xl">Your Name :</label>
             </div>
             <input
               type="text"
@@ -109,7 +109,7 @@ const Purchase = () => {
 
           <div className="flex flex-row justify-around items-center mb-3">
             <div className="w-1/5">
-              <label class="label text-xl">Email :</label>
+              <label className="label text-xl">Email :</label>
             </div>
             <input
               type="email"
@@ -121,7 +121,7 @@ const Purchase = () => {
           </div>
           <div className="flex flex-row gap-5 justify-around items-center mb-3">
             <div className="w-1/6">
-              <label class="label text-xl">Address :</label>
+              <label className="label text-xl">Address :</label>
             </div>
             <input
               onBlur={(e) => setAddress(e.target.value)}
@@ -134,7 +134,7 @@ const Purchase = () => {
           </div>
           <div className="flex flex-row gap-5 justify-around items-center mb-3">
             <div className="w-1/6">
-              <label class="label text-xl">Phone :</label>
+              <label className="label text-xl">Phone :</label>
             </div>
             <input
               onBlur={(e) => setPhone(e.target.value)}
@@ -147,7 +147,7 @@ const Purchase = () => {
           </div>
           <div className="flex flex-row gap-5 justify-around items-center">
             <div className="w-1/6">
-              <label class="label text-xl">Quantity :</label>
+              <label className="label text-xl">Quantity :</label>
             </div>
             <input
               onChange={(e) => setPartQuantity(e.target.value)}

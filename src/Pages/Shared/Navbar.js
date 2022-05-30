@@ -52,7 +52,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex="0" className="btn btn-primary btn-ghost lg:hidden">
+          <label tabIndex="0" className="btn btn-primary btn lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -73,7 +73,7 @@ const Navbar = () => {
             {menuItems}
           </ul>
         </div>
-        <Link to="/" className="normal-case text-2xl font-bold">
+        <Link to="/" className="normal-case text-primary text-2xl font-bold">
           Ak-Accessories
         </Link>
       </div>

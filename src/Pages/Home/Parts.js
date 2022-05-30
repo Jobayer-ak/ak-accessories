@@ -14,8 +14,8 @@ const Parts = () => {
 
   return (
     <div className="mb-20">
-      <h2 className="text-2xl">Parts: {parts.length}</h2>
-      <div className="flex flex-row flex-wrap gap-14">
+      <h2 className="text-4xl text-center text-primary ">Motor Cycle Parts</h2>
+      <div className="grid grid-rows-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 p-5 gap-7">
         {pathName == "/"
           ? parts
               .slice(0, 6)

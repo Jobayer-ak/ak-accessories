@@ -5,6 +5,7 @@ import Banner from "./Banner";
 import Brand from "./Brand/Brand";
 import BusinessSummary from "./BusinessSummary/BusinessSummary";
 import Parts from "./Parts";
+import ShowCase from "./ShowCase/ShowCase";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <BusinessSummary></BusinessSummary>
         <Reviews></Reviews>
         <Brand></Brand>
+        <ShowCase></ShowCase>
         <Footer></Footer>
       </div>
     </div>

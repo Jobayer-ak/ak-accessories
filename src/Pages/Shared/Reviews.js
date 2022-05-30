@@ -68,8 +68,8 @@ const Reviews = () => {
   }, [reviews]);
 
   return (
-    <div className="container mx-auto my-5 p-5">
-      <h2 className="text-center text-primary font-bold text-4xl mb-8">
+    <div className="container mx-auto my-5 p-7 review-container">
+      <h2 className="text-center text-primary font-bold text-4xl pb-10">
         What Our Customers Say
       </h2>
 
@@ -77,7 +77,7 @@ const Reviews = () => {
         {reviews?.map((review) => (
           <div
             key={review._id}
-            className="flex flex-col md:flex-row lg:flex-row rounded-md bg-base-100 shadow-xl p-3 w-full gap-4">
+            className="flex flex-col lg:flex-row rounded-md bg-base-100 shadow-xl p-3 w-full gap-4">
             <img
               className="rounded-full items-center"
               src={review.image}

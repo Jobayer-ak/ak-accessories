@@ -10,7 +10,7 @@ const Brand = () => {
   return (
     <div className="text-center mb-7 pt-5 pb-10 ">
       <h2 className="text-primary text-4xl font-bold my-8">Brand</h2>
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-5 brand-container ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 brand-container ">
         <div className="brand">
           <img src={yamaha} alt="" />
         </div>

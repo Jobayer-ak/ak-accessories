@@ -120,13 +120,13 @@ const MyProfile = () => {
       </form>
 
       {/* <!-- The button to open modal --> */}
-      <label for="my-modal-6" class="btn btn-primary modal-button">
+      <label for="my-modal-6" className="btn btn-primary modal-button">
         Update Your Profile
       </label>
 
-      <input type="checkbox" id="my-modal-6" class="modal-toggle" />
-      <div class="modal modal-bottom sm:modal-middle">
-        <div class="modal-box">
+      <input type="checkbox" id="my-modal-6" className="modal-toggle" />
+      <div className="modal modal-bottom sm:modal-middle">
+        <div className="modal-box">
           <form
             onSubmit={handleUpdate}
             className="mx-auto flex flex-col w-2/4 gap-2 my-3">
@@ -159,11 +159,11 @@ const MyProfile = () => {
               name="phone"
             />
             <button className="btn btn-primary">Save</button>
-            <div class="modal-action">
+            <div className="modal-action">
               {/* <label htmlFor="my-modal-6" className="btn btn-primary">
                 Cancel
               </label> */}
-              <label for="my-modal-6" class="btn btn-primary">
+              <label for="my-modal-6" className="btn btn-primary">
                 Close
               </label>
             </div>

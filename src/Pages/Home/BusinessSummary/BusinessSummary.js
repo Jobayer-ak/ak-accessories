@@ -19,7 +19,7 @@ const BusinessSummary = () => {
       </div>
 
       {/* icons */}
-      <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-0 items-center pt-10 icon_container">
+      <div className="flex flex-col md:flex-row lg:flex-row justify-between gap-10 lg:gap-0 items-center pt-10 icon_container">
         <div>
           <FontAwesomeIcon
             size="6x"
@@ -71,9 +71,9 @@ const BusinessSummary = () => {
       </div>
 
       <div className="lg:px-20">
-        <div class="flex flex-col md:flex-row lg:felx-row justify-between items-center p-5 lg:p-10 rounded-lg w-full bg-base-100 shadow-xl mt-20">
+        <div className="flex flex-col md:flex-row lg:felx-row justify-between items-center p-5 lg:p-10 rounded-lg w-full bg-base-100 shadow-xl mt-20">
           <div className="text-left">
-            <h2 class="text-2xl font-bold text-secondary">
+            <h2 className="text-2xl font-bold text-secondary">
               Have any question about us or get a parts request?
             </h2>
 
@@ -82,8 +82,8 @@ const BusinessSummary = () => {
             </p>
           </div>
           <div className="flex flex-col lg:flex-row items-center justify-center gap-4 p-4">
-            <button class="btn btn-md">Request For Quote</button>
-            <button class="btn btn-md btn-primary">Contact Us</button>
+            <button className="btn btn-md">Request For Quote</button>
+            <button className="btn btn-md btn-primary">Contact Us</button>
           </div>
         </div>
       </div>
