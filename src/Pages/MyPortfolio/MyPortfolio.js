@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Shared/Footer";
 
 const MyPortfolio = () => {
   return (
@@ -15,6 +16,17 @@ const MyPortfolio = () => {
         Javascript, ReactJS, NodeJs, expressJs, Git{" "}
       </p>
       <p className="text-primary my-2">Projects Link: </p>
+      <p className="text-primary my-2">
+        Link 1: https://e-warehouse-management.firebaseapp.com/{" "}
+      </p>
+      <p className="text-primary my-2">
+        Link 2: https://verdant-mermaid-2c74f9.netlify.app/
+      </p>
+      <p className="text-primary my-2">
+        Link 3: https://famous-cuchufli-8bc987.netlify.app/
+      </p>
+
+      <Footer></Footer>
     </div>
   );
 };

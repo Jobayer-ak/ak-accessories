@@ -44,8 +44,6 @@ const Purchase = () => {
     }
   }, [partQuantity, isReload]);
 
-  console.log(part.img);
-
   // handle order button
   const handleOrder = (e) => {
     e.preventDefault();
