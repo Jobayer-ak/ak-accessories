@@ -44,6 +44,8 @@ const Purchase = () => {
     }
   }, [partQuantity, isReload]);
 
+  console.log(part.img);
+
   // handle order button
   const handleOrder = (e) => {
     e.preventDefault();
@@ -77,13 +79,15 @@ const Purchase = () => {
         <h2 className="text-3xl font-bold">Purchase</h2>
       </div>
       <div className="flex md:flex-row flex-col justify-evenly items-center mt-20 gap-7">
-        <div className="text-center bg-slate-200 rounded-md shadow-2xl p-4">
+        <div className="text-center w-3/6 p-3 flex flex-col bg-slate-200 rounded-md shadow-2xl ">
           <div>
             <img className="w-72 mx-auto bg-slate-200" src={part.img} alt="" />
           </div>
           <div className="mt-4">
             <h2 className="text-2xl mb-1">Parts Name: {part.name}</h2>
-            <p className="font-bold">{part.description}</p>
+            <div className="w-2/4 mx-auto">
+              <p className="font-bold p-7">{part.description}</p>
+            </div>
             <h4 className="text-xl font-bold">Price: ${part.price}</h4>
             <p className="font-bold">
               Available Quantity: {part.available_quantity}
