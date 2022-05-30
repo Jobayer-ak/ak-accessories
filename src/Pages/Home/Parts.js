@@ -25,7 +25,7 @@ const Parts = () => {
               .map((part) => <Part key={part._id} part={part}></Part>)
           : parts.map((part) => <Part key={part._id} part={part}></Part>)}
       </div>
-      <Footer></Footer>
+      
     </div>
   );
 };
