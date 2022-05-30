@@ -58,7 +58,7 @@ const Reviews = () => {
   }
 
   useEffect(() => {
-    const url = "http://localhost:5000/reviews";
+    const url = "https://thawing-reef-56489.herokuapp.com/reviews";
 
     fetch(url, {
       method: "GET",

@@ -20,7 +20,7 @@ const OrderedPartsDetail = ({ ordered, isReload, setIsReload }) => {
 
   // handle delete order
   const handleDeleteOrder = () => {
-    const url = `http://localhost:5000/orders/${_id}`;
+    const url = `https://thawing-reef-56489.herokuapp.com/orders/${_id}`;
     fetch(url, {
       method: "DELETE",
     })

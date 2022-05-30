@@ -5,7 +5,7 @@ const useOrders = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    const url = `http://localhost:5000/orders`;
+    const url = `https://thawing-reef-56489.herokuapp.com/orders`;
     // console.log(url);
     fetch(url)
       .then((res) => res.json())

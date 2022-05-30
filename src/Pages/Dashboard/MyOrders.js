@@ -9,9 +9,12 @@ const MyOrders = () => {
   const [isReload, setIsReload] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders?email=${user.email}`, {
-      method: "GET",
-    })
+    fetch(
+      `https://thawing-reef-56489.herokuapp.com/orders?email=${user.email}`,
+      {
+        method: "GET",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         const myOrders = data.filter((d) => d.customerEmail === user.email);

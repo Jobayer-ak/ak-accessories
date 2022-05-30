@@ -11,7 +11,7 @@ const AddParts = () => {
   // Add Item
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data, e) => {
-    const url = `http://localhost:5000/parts`;
+    const url = `https://thawing-reef-56489.herokuapp.com/parts`;
     fetch(url, {
       method: "POST",
       headers: {

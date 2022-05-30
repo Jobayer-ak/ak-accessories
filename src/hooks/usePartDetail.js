@@ -5,7 +5,7 @@ const usePartDetail = (partsId) => {
   const [part, setPart] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/parts/${partsId}`;
+    const url = `https://thawing-reef-56489.herokuapp.com/${partsId}`;
     // console.log(url);
     fetch(url)
       .then((res) => res.json())

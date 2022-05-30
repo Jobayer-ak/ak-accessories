@@ -26,7 +26,7 @@ const MyProfile = () => {
     };
 
     console.log(info);
-    const url = "http://localhost:5000/myProfile";
+    const url = "https://thawing-reef-56489.herokuapp.com/myProfile";
     fetch(url, {
       method: "POST",
       headers: {
@@ -59,7 +59,7 @@ const MyProfile = () => {
       phone: e.target.phone.value,
     };
 
-    const url = `http://localhost:5000/updateProfile/${user.email}`;
+    const url = `https://thawing-reef-56489.herokuapp.com/updateProfile/${user.email}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -120,7 +120,7 @@ const MyProfile = () => {
       </form>
 
       {/* <!-- The button to open modal --> */}
-      <label for="my-modal-6" className="btn btn-primary modal-button">
+      <label htmlFor="my-modal-6" className="btn btn-primary modal-button">
         Update Your Profile
       </label>
 
@@ -163,7 +163,7 @@ const MyProfile = () => {
               {/* <label htmlFor="my-modal-6" className="btn btn-primary">
                 Cancel
               </label> */}
-              <label for="my-modal-6" className="btn btn-primary">
+              <label htmlFor="my-modal-6" className="btn btn-primary">
                 Close
               </label>
             </div>
