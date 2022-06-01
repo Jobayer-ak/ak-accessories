@@ -19,10 +19,15 @@ const Dashboard = () => {
           className="drawer-toggle"
         />
         <div className="drawer-content">
-          {/* <h2 className="text-3xl font-bold text-purple-500">
-          Welcome To Your Dashboard
-        </h2> */}
+          <h2 className="text-3xl font-bold text-purple-500">
+            Welcome To Your Dashboard
+          </h2>
           <Outlet />
+          {/* <label
+            htmlFor="my-drawer-2"
+            className="btn btn-primary drawer-button lg:hidden">
+            Open drawer
+          </label> */}
         </div>
         <div className="drawer-side">
           <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
