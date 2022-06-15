@@ -11,14 +11,8 @@ const Purchase = () => {
   const { partsId } = useParams();
   const [part] = usePartDetail(partsId);
   const [isReload, setIsReload] = useState(false);
-  const [partName, setPartName] = useState("");
-  const [customerEmail, setCustomerEmail] = useState("");
-  const [customerName, setCustomerName] = useState("");
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
-  const [partPrice, setPartPrice] = useState("");
-  const [partDesc, setPartDesc] = useState("");
-  const [partImg, setPartImg] = useState("");
   const [partQuantity, setPartQuantity] = useState(1);
   const [status, setStatus] = useState(false);
   const [fieldError, setFieldError] = useState("");
