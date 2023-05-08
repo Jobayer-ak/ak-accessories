@@ -44,7 +44,7 @@ const Purchase = () => {
     if (address === "" || phone === "" || partQuantity === "") {
       setFieldError("You must fill up all the input field!");
     } else {
-      fetch("https://thawing-reef-56489.herokuapp.com/orders", {
+      fetch("https://ak-accessories-server-side.vercel.app/orders", {
         method: "POST",
         headers: {
           "content-type": "application/json",

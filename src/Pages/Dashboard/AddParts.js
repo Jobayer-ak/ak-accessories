@@ -11,7 +11,7 @@ const AddParts = () => {
   // Add Item
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data, e) => {
-    const url = `https://thawing-reef-56489.herokuapp.com/parts`;
+    const url = `https://ak-accessories-server-side.vercel.app/parts`;
     fetch(url, {
       method: "POST",
       headers: {

@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This is live site ink [Ak=Accessories](https://ak-accessories.firebaseapp.com/).
+This is live site ink [Ak-Accessories](https://ak-accessories.firebaseapp.com/).
 
 ## Using Technololigies:
 

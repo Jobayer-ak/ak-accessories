@@ -26,7 +26,7 @@ const MyProfile = () => {
     };
 
     console.log(info);
-    const url = "https://thawing-reef-56489.herokuapp.com/myProfile";
+    const url = "https://ak-accessories-server-side.vercel.app/myProfile";
     fetch(url, {
       method: "POST",
       headers: {
@@ -59,7 +59,7 @@ const MyProfile = () => {
       phone: e.target.phone.value,
     };
 
-    const url = `https://thawing-reef-56489.herokuapp.com/updateProfile/${user.email}`;
+    const url = `https://ak-accessories-server-side.vercel.app/updateProfile/${user.email}`;
     fetch(url, {
       method: "PUT",
       headers: {

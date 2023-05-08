@@ -52,7 +52,7 @@ const Navbar = () => {
     <div className="navbar px-12">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex="0" className="btn btn-primary btn lg:hidden">
+          <label tabIndex="0" className="btn btn-primary lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -80,7 +80,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
       </div>
-      <div className="navbar-end">
+      {/* <div className="navbar-end">
         <label
           tabIndex="1"
           htmlFor="dashboard-sidebar"
@@ -99,7 +99,7 @@ const Navbar = () => {
             />
           </svg>
         </label>
-      </div>
+      </div> */}
     </div>
   );
 };

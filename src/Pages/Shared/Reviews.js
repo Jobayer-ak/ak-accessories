@@ -58,7 +58,7 @@ const Reviews = () => {
   }
 
   useEffect(() => {
-    const url = "https://thawing-reef-56489.herokuapp.com/reviews";
+    const url = "https://ak-accessories-server-side.vercel.app/reviews";
 
     fetch(url, {
       method: "GET",

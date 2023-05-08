@@ -20,7 +20,7 @@ const OrderedPartsDetail = ({ ordered, isReload, setIsReload }) => {
 
   // handle delete order
   const handleDeleteOrder = () => {
-    const url = `https://thawing-reef-56489.herokuapp.com/orders/${_id}`;
+    const url = `https://ak-accessories-server-side.vercel.app/orders/${_id}`;
     fetch(url, {
       method: "DELETE",
     })

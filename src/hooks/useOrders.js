@@ -5,7 +5,7 @@ const useOrders = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    const url = `https://thawing-reef-56489.herokuapp.com/orders`;
+    const url = `https://ak-accessories-server-side.vercel.app/orders`;
     // console.log(url);
     fetch(url)
       .then((res) => res.json())

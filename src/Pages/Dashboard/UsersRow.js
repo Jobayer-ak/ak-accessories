@@ -5,7 +5,7 @@ const UserRow = ({ user, refetch }) => {
   const { email, role } = user;
 
   const makeAdmin = () => {
-    fetch(`https://thawing-reef-56489.herokuapp.com/user/admin/${email}`, {
+    fetch(`https://ak-accessories-server-side.vercel.app/user/admin/${email}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

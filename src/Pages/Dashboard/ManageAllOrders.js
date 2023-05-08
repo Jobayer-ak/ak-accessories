@@ -10,7 +10,7 @@ const ManageAllOrders = () => {
 
   useEffect(() => {
     fetch(
-      `https://thawing-reef-56489.herokuapp.com/orders?email=${user.email}`,
+      `https://ak-accessories-server-side.vercel.app/orders?email=${user.email}`,
       {
         method: "GET",
       }
